@@ -67,39 +67,15 @@ public class ContactObjectClass {
 				gettingDataFromUser();
 				//return;
 				System.out.println("\n");
-				System.out.println("if you want to go back to show menu ");
-				System.out.println("press 1");
-				System.out.println("if you want to exit ");
-				System.out.println("press 2");
-				int no=sc.nextInt();
-				if(no==1)
-				{
-					
-				return;
-				}
-				else if(no==2)
-				{
-					System.exit(0);
-				}
+			        userRequest();
+				break
+				
 			case 2:
 				System.out.println("your choosen to view the contact");
 				showinDataToUser();
 				//return;
-				System.out.println("\n");
-				System.out.println("if you want to go back to show menu ");
-				System.out.println("press 1");
-				System.out.println("if you want to exit ");
-				System.out.println("press 2");
-				 no=sc.nextInt();
-				if(no==1)
-				{
-					
-				return;
-				}
-				else if(no==2)
-				{
-					System.exit(0);
-				}
+				userRequest();
+				break;
 			case 3:
 				System.out.println("your choosen to modify the contact list");
 				i = showinDataToUser();
@@ -110,40 +86,16 @@ public class ContactObjectClass {
 				modificationToContact(length);
 				//return;
 				System.out.println("\n");
-				System.out.println("if you want to go back to show menu ");
-				System.out.println("press 1");
-				System.out.println("if you want to exit ");
-				System.out.println("press 2");
-				 no=sc.nextInt();
-				if(no==1)
-				{
-					
-				return;
-				}
-				else if(no==2)
-				{
-					System.exit(0);
-				}
+				userRequest();
+				break;
 				
 			case 4:
 				System.out.println("your selected to delete the contact");
 				deleteFromUsercontact();
 				//return ;
 				System.out.println("\n");
-				System.out.println("if you want to go back to show menu ");
-				System.out.println("press 1");
-				System.out.println("if you want to exit ");
-				System.out.println("press 2");
-				no=sc.nextInt();
-				if(no==1)
-				{
-					
-				return;
-				}
-				else if(no==2)
-				{
-					System.exit(0);
-				}
+				userRequest();
+				break;
 			case 5:
 				System.out.println("EXIT");
 				System.exit(0);
@@ -223,5 +175,24 @@ public class ContactObjectClass {
 			
 		return;
 		}
+	}
+	public void userRequest()
+	{
+		System.out.println("if you want to go back to show menu ");
+				System.out.println("press 1");
+				System.out.println("if you want to exit ");
+				System.out.println("press 2");
+		                 Scanner sc=new Scanner(System.in);
+				int no=sc.nextInt();
+				if(no==1)
+				{
+					
+				return;
+				}
+				else if(no==2)
+				{
+					System.out.println("EXIT");
+					System.exit(0);
+				}
 	}
 }
